@@ -1,112 +1,74 @@
-# 🛒 PRICE VERSE - E-Commerce Product Comparison Analyzer
+# 🛒 PRICE VERSE — E-Commerce Product Comparison Analyzer
 
-A powerful JavaFX desktop application that compares product prices, ratings, and offers across multiple Indian e-commerce platforms using AI-powered web scraping.
+**PRICE VERSE** is an AI-powered JavaFX desktop application that helps users compare products across multiple Indian e-commerce platforms.
+
+It brings product prices, ratings, offers, delivery information and historical price trends together in one place, helping users make faster and more informed purchasing decisions.
+
+---
 
 ## ✨ Features
 
-- 🤖 **AI-Powered Scraping**: Uses Google Gemini API to fetch real-time product data
-- 🏪 **Multi-Platform Support**: Compares prices from Amazon, Flipkart, Meesho, Shopify, Myntra, Ajio, Snapdeal, Tata CLiQ
-- 📊 **Smart Insights**: Displays best price, top-rated platform, and fastest delivery
-- 📈 **Price Tracking**: Historical price trends with interactive charts
-- 🎨 **Dual Themes**: Modern dark and light themes
-- 💾 **Database Storage**: PostgreSQL integration for data persistence
-- 📑 **Export Options**: Export comparisons to PDF and Excel
-- 🔄 **Auto-Refresh**: Automatic product data updates
+- 🤖 **AI-Powered Product Analysis**  
+  Uses the Google Gemini API to assist with collecting and processing product information.
 
-## 🖥️ Screenshots
+- 🏪 **Multi-Platform Comparison**  
+  Compares product information across platforms such as Amazon, Flipkart, Meesho, Shopify, Myntra, Ajio, Snapdeal and Tata CLiQ.
 
-### Dark Theme
-![Dark Theme](docs/dark-theme.png)
+- 📊 **Smart Insights**  
+  Helps identify the best price, top-rated platform and fastest delivery option.
 
-### Light Theme
-![Light Theme](docs/light-theme.png)
+- 📈 **Price Tracking**  
+  Stores and displays historical price trends using interactive charts.
 
-### Product Comparison
-![Comparison Table](docs/comparison-table.png)
+- 🎨 **Dual Themes**  
+  Supports modern dark and light themes.
 
-## 🚀 Getting Started
+- 💾 **Database Storage**  
+  Uses PostgreSQL for persistent storage of product and price information.
 
-### Prerequisites
+- 📑 **Export Options**  
+  Supports exporting product comparisons to PDF and Excel.
 
-- **Java 17+** ([Download](https://www.oracle.com/java/technologies/downloads/))
-- **PostgreSQL 13+** ([Download](https://www.postgresql.org/download/))
-- **Google Gemini API Key** ([Get Free Key](https://ai.google.dev))
+- 🔄 **Auto Refresh**  
+  Supports automatic updates of product information.
 
-### Installation
+---
 
-1. **Clone the repository**
-git clone https://github.com/SPACE-MONARCH/ecommerce-analyzer.git
-cd ecommerce-analyzer
-2. **Set up PostgreSQL Database**
-Open psql
-psql -U postgres
+## 🎯 Problem Statement
 
-Create database
-CREATE DATABASE ecommerce_analyzer;
-Copy example configuration
-cp src/main/resources/application.properties.example src/main/resources/application.properties
+Online shoppers often have to visit multiple e-commerce websites to compare the same product.
 
-Edit with your credentials
-nano src/main/resources/application.properties
-Add your credentials:
-gemini.api.key=YOUR_ACTUAL_API_KEY
-db.password=YOUR_DB_PASSWORD
-4. **Build and Run**
-Build project
-./gradlew build
+Important information such as:
 
-Run application
-./gradlew run
-## 📁 Project Structure
+- Product price
+- Ratings
+- Offers
+- Delivery information
+- Historical price trends
 
-ecommerce-analyzer/
-├── src/main/
-│ ├── java/com/ecommerce/analyzer/
-│ │ ├── controller/ # JavaFX Controllers
-│ │ ├── model/ # Data Models
-│ │ ├── repository/ # Database Access Layer
-│ │ ├── service/ # Business Logic
-│ │ ├── util/ # Utility Classes
-│ │ └── Main.java # Application Entry Point
-│ └── resources/
-│ ├── fxml/ # JavaFX UI Files
-│ ├── css/ # Stylesheets
-│ └── application.properties
-├── database/
-│ └── schema.sql # Database Schema
-├── docs/ # Documentation & Screenshots
-├── build.gradle # Gradle Configuration
-└── README.md
+may be distributed across different platforms.
 
-### Database Connection
-db.url=jdbc:postgresql://localhost:5432/ecommerce_analyzer
-db.username=postgres
-db.password=your_password
-## 📝 License
+PRICE VERSE aims to simplify this process by bringing product information together into a single application and providing AI-assisted analysis.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
 
-## 👨‍💻 Author
+## 💡 Solution
 
-**Monty Milan Biswal**
-- GitHub: [@SPACE-MONARCH](https://github.com/SPACE-MONARCH)
+PRICE VERSE follows this basic workflow:
 
-
-**Joel Chacko**
-- GitHub: [@YET1-2006](https://github.com/YET1-2006)
-
-
-**Anushka Verma**
-- Github: [@anusshhkkaaa](https://github.com/anusshhkkaaa)
-- LinkedIN: (https://www.linkedin.com/in/anushka-verma-607557350?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
-
-
-**Nishtha Agarwal**
-- Github: [@nishthaagarwal2503-dot](https://github.com/nishthaagarwal2503-dot)
-
-
-## 🙏 Acknowledgments
-
-- Google Gemini API for AI capabilities
-- JavaFX community for UI components
-- All open-source library contributors
+```text
+User searches for a product
+          ↓
+AI-assisted product data collection
+          ↓
+Product information processing
+          ↓
+Data stored in PostgreSQL
+          ↓
+Comparison and analysis
+          ↓
+Best price / rating / delivery insights
+          ↓
+Historical price analysis
+          ↓
+User makes an informed decision
